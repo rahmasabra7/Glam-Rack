@@ -1,0 +1,287 @@
+body,html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    height:100%;
+    }
+    
+    .loading-page{
+    
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bcg2.jpg');
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    }
+    .spinner{
+        width: 50px;
+        height: 50px;
+        border: 5px solid #ffffff;
+        border-top: 5px solid #612404;
+        border-right: 5px solid #032314;
+        border-radius: 50%;
+        animation: spin 0.5s linear infinite;
+    } 
+    
+    .loading-page h1 {
+        margin-top: 20px;
+        color:red;
+      }
+      
+    
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .content {
+        display: none;
+      }
+/*         begginning of page */
+      /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color:  #e12323;
+  background-image: url('bcg1.jpg');
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #040f06;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.header .links {
+  position: relative;
+  }
+  .header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+  }
+  .header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  }
+  .header .links .icon span {
+  background-color:  #e12323;
+  margin-bottom: 5px;
+  height: 2px;
+  }
+  .header .links .icon span:first-child {
+  width: 100%;
+  }
+  .header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: var(--main-duration);
+  }
+  .header .links .icon span:last-child {
+  width: 100%;
+  }
+  .header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #200202;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+  }
+  .header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #8a7171 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+  }
+  .header .links:hover ul {
+  display: block;
+  }
+  .header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color:  #e12323;
+  transition: var(--main-duration);
+  }
+  .header .links ul li a:hover {
+  padding-left: 25px;
+  }
+  .header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+  }
+  
+/* .navbar */ a {
+  text-decoration: none;
+  color: #e12323;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+/*.navbar*/ a:hover {
+  color: #cfe0db;
+ 
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(203, 113, 113);
+}
+
+/* .hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+} */
+.hero img{
+  width: 55%;
+  height: 85%;
+  object-fit: cover;
+padding: 0%;
+margin: 0%;
+}
+.hero-text marquee {
+  font-size: larger;
+}
+
+/* types Grid */
+.types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.type {
+  text-align: center;
+  padding: 10px;
+  /* background: #120707; */
+  /* border: 1px solid #ddd; */
+  transition: transform 0.3s;
+}
+
+.type img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.type h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.type p {
+  font-size: 1em;
+  color: #d6c7c7;
+}
+
+.type:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8cf;
+  color: #555;
+}
+.type img:hover {
+  filter: brightness(0.8);
+}
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+  .hero {
+      height: 30vh;
+  }
+  /* .hero-text h1 {
+      font-size: 2em;
+  } */
+}
+html {
+  scroll-behavior: smooth;
+}
+.hero{
+  background-image:url('assests/DALL·E\ 2024-12-04\ 21.28.00\ -\ A\ modern\ clothing\ store\ display\ with\ a\ dark\ aesthetic.\ The\ clothing\ colors\ are\ dark\ tones\ such\ as\ blacks\,\ deep\ grays\,\ and\ dark\ browns.\ The\ mannequins\ .webp') ;
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+
+}
+marquee{
+  background-color: #1e1b1bcf;
+width: 100%;
+border: #555;
+border-radius:20% ;
+}
+.marquee {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  background-color: rgba(33, 28, 28, 0.8); 
+  color: red; 
+  text-align: center; 
+  padding: 10px; 
+  overflow: hidden; 
+  white-space: nowrap; 
+}
+
+.marquee span {
+  display: inline-block; 
+  animation: marquee 10s linear infinite; /
+}
+
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+body{
+  background-image: url(assests/bcg1.jpg);
+}
